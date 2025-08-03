@@ -1,49 +1,68 @@
-# 🎬 IMDB Movie Review Sentiment Analyzer
+## 🎬 IMDB Movie Review Sentiment Analyzer
+LIVE : [https://moviereview-sentiment-analyzer.streamlit.app/](https://imdb-movie-review-sentiment-analyzer-huwoyflgzffjesxokqtsmc.streamlit.app/)
 
-## Project Overview
+This project is an End-to-End Sentiment Analysis Pipeline built using PyTorch (Deep Learning) and deployed through Streamlit as an interactive web app.
+The model classifies movie reviews from the IMDB dataset into Positive or Negative sentiments.
 
-This project analyzes sentiment in movie reviews using the **IMDB 50K dataset**—classifying each review as either **positive** or **negative**. It includes:
+## 📖 Table of Contents
+Overview
+Features
+Architecture
+Dataset
+Installation & Usage
+Demo
+Results
+Tech Stack
+Future Enhancements
+Overview
+Movie reviews are an excellent benchmark for Natural Language Processing tasks.
+## This project:
 
-- **Data preprocessing**: cleaning text (HTML stripping, stop-word removal, normalization)
-- **Tokenization & padding**: converting reviews into padded sequences for input
-- **Word embeddings**: using GloVe vectors to capture semantic context
-- **Modeling**: exploring multiple architectures such as:
-  - Simple feed-forward neural network
-  - **Convolutional Neural Network (CNN)**
-  - **Long Short-Term Memory (LSTM)** network
-- **Evaluation**: comparing performance (accuracy, precision, recall, F1) of each model
-- **User interface**: optional demo app (e.g., via Flask or Streamlit) to input reviews and see sentiment predictions
+Preprocesses text data (cleaning, tokenization, encoding)
+Trains an LSTM neural network from scratch using PyTorch
+Deploys an interactive web application using Streamlit
+The web app lets users input any movie review and instantly get:
 
-The goal is to demonstrate how deep learning-based NLP models can effectively classify textual sentiment and to compare model architectures.
+Sentiment classification (Positive/Negative)
+Confidence score displayed as stars
 
+## Features
+🧠 Deep Learning Model: LSTM-based architecture
+🗃 Dataset: IMDB 50,000 labeled reviews
+🖥 Interactive Streamlit UI with:
+Text input for user reviews
+Result display with confidence scores
+Custom background and styled UI
+⭐ Confidence visualization using star ratings
+🏆 Model accuracy achieved: ~87%
+## Tech Stack
+Python 3.9+
+PyTorch for deep learning
+Streamlit for the interactive web app
+Pandas, NumPy, scikit-learn for data handling
+## Architecture
+Steps:
 
-## Steps to Run Locally
+Data Preprocessing
+Vocabulary Encoding
+Train/Test Split
+Model Training (LSTM)
+Save model (imdb_lstm_model.pth)
+Deploy on Streamlit
+Model Summary:
 
-1. **Clone the repository**  
-   ```bash
-   git clone https://github.com/sowmithraramesh/IMDB-Movie-Review-Sentiment-Analyzer.git
-   cd IMDB-Movie-Review-Sentiment-Analyzer
-2.Set up a Python environment (recommended)
+Embedding Layer
+LSTM Layer
+Dropout (0.5)
+Fully Connected Layer
+Sigmoid Output
+Dataset
+## Dataset used:
+IMDB 50K Movie Reviews
 
-bash
-Copy code
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-3.Install dependencies
-
-bash
-Copy code
-pip install -r requirem
-ents.txt
-
-## Results Highlights
-LSTM models consistently outperform simpler architectures for sentiment classification on this dataset, often achieving accuracy in the mid to high 80% range 
-irjmets.com
-github.com
-<img width="1838" height="996" alt="Screenshot 2025-08-01 230159" src="https://github.com/user-attachments/assets/e7af71f1-6618-4066-951a-e7e1fcec3811" />
-
-CNNs and feed-forward networks also provide reasonable performance but slightly behind LSTMs
-
-This project offers hands‑on insights into text preprocessing, tokenization, embedding, and neural model tuning in NLP contexts
-
+25,000 labeled reviews for training
+25,000 labeled reviews for testing
+Balanced dataset (Positive & Negative reviews)
+## Output
+<img width="1838" height="996" alt="Screenshot 2025-08-01 230159" src="https://github.com/user-attachments/assets/106c7cce-2409-478f-80a3-2215fa5e166e" />
 
