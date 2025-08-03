@@ -34,12 +34,14 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 
 bash
 Copy code
-pip install -r requirements.txt
+pip install -r requirem
+ents.txt
 
 ## Results Highlights
 LSTM models consistently outperform simpler architectures for sentiment classification on this dataset, often achieving accuracy in the mid to high 80% range 
 irjmets.com
 github.com
+<img width="1838" height="996" alt="Screenshot 2025-08-01 230159" src="https://github.com/user-attachments/assets/e7af71f1-6618-4066-951a-e7e1fcec3811" />
 
 CNNs and feed-forward networks also provide reasonable performance but slightly behind LSTMs
 
