@@ -16,7 +16,6 @@ This project analyzes sentiment in movie reviews using the **IMDB 50K dataset**â
 
 The goal is to demonstrate how deep learning-based NLP models can effectively classify textual sentiment and to compare model architectures.
 
----
 
 ## Steps to Run Locally
 
